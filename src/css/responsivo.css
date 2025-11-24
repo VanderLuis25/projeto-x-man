@@ -1,0 +1,79 @@
+@media (max-width: 450px) {
+  .selecao-de-personagens {
+    flex-direction: column-reverse;
+    max-width: 430px;
+    margin: 0 auto;
+  }
+
+  .selecao-de-personagens .personagens {
+    /* Escondemos a seção da lista de personagens em telas pequenas */
+    display: none;
+  }
+
+  .personagem-selecionado {
+    /* Adicionamos position: relative para que os botões possam ser posicionados dentro dele */
+    position: relative;
+  }
+
+  .personagem-selecionado .personagem-grande {
+    width: 350px;
+    height: 350px;
+  }
+
+  .selecao-de-personagens .personagem img {
+    width: 80px;
+  }
+
+  .personagem-selecionado .descricao-personagem {
+    width: 80%;
+    font-size: 16px;
+    margin: 20px auto;
+  }
+  .botoes-navegacao {
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    gap: 20px; /* Adiciona um espaço entre os botões */
+    margin-top: 20px; /* Adiciona um espaço acima dos botões */
+    /* Removemos o posicionamento absoluto */
+  }
+
+  /* Estilização profissional para os botões de navegação com animação */
+  .botoes-navegacao .btn-anterior,
+  .botoes-navegacao .btn-proximo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background: linear-gradient(to right, #0c0c0e, #1e1e24);
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    animation: pulsar 2s infinite ease-in-out; /* Aplica a animação */
+  }
+
+  .botoes-navegacao .btn-anterior:hover,
+  .botoes-navegacao .btn-proximo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    animation: none; /* Pausa a animação ao passar o mouse */
+  }
+
+  /* Definição da animação de pulsar */
+  @keyframes pulsar {
+    0% {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 20px 5px #0271f7; /* Efeito de brilho azul */
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    }
+  }
+}
